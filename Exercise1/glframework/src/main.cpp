@@ -161,56 +161,9 @@ std::vector<vertex> createCubeVertices()
     std::vector<vertex> vertices;
     
     // TODO: create a cube here instead of a triangle and apply colors and correct normals
-    
-   
-    // Front Face
-    vertices.push_back(vertex{ glm::vec3(-1,-1, 1), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) }); //position, texture uv, normal, color 
-    vertices.push_back(vertex{ glm::vec3(1,-1, 1), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1,1, 1), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) });
-    vertices.push_back(vertex{ glm::vec3(1,-1, 1), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) });
-    vertices.push_back(vertex{ glm::vec3(1,1, 1), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1,1, 1), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) });
-
-    //Back Face
-    vertices.push_back(vertex{ glm::vec3(-1,-1, -1), glm::vec2(), glm::vec3(0, 0, -1), glm::vec3(0, 1, 1) });
-    vertices.push_back(vertex{ glm::vec3(-1,1, -1), glm::vec2(), glm::vec3(0, 0, -1), glm::vec3(0, 1, 1) });
-    vertices.push_back(vertex{ glm::vec3(1,-1, -1), glm::vec2(), glm::vec3(0, 0, -1), glm::vec3(0, 1, 1) });
-    vertices.push_back(vertex{ glm::vec3(1,-1, -1), glm::vec2(), glm::vec3(0, 0, -1), glm::vec3(0, 1, 1) });
-    vertices.push_back(vertex{ glm::vec3(-1,1, -1), glm::vec2(), glm::vec3(0, 0, -1), glm::vec3(0, 1, 1) });
-    vertices.push_back(vertex{ glm::vec3(1,1, -1), glm::vec2(), glm::vec3(0, 0, -1), glm::vec3(0, 1, 1) });
-
-    vertices.push_back(vertex{ glm::vec3(-1, -1,-1), glm::vec2(), glm::vec3(0, -1, 0), glm::vec3(0, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(1, -1,-1), glm::vec2(), glm::vec3(0, -1, 0), glm::vec3(0, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, -1,1), glm::vec2(), glm::vec3(0, -1, 0), glm::vec3(0, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(1, -1,-1), glm::vec2(), glm::vec3(0, -1, 0), glm::vec3(0, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(1, -1,1), glm::vec2(), glm::vec3(0, -1, 0), glm::vec3(0, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, -1,1), glm::vec2(), glm::vec3(0, -1, 0), glm::vec3(0, 1, 0) });
-
-    vertices.push_back(vertex{ glm::vec3(-1,1, -1), glm::vec2(), glm::vec3(0, 1, 0), glm::vec3(1, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(-1, 1,1), glm::vec2(), glm::vec3(0, 1, 0), glm::vec3(1, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, 1,-1), glm::vec2(), glm::vec3(0, 1, 0), glm::vec3(1, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, 1,-1), glm::vec2(), glm::vec3(0, 1, 0), glm::vec3(1, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(-1, 1,1), glm::vec2(), glm::vec3(0, 1, 0), glm::vec3(1, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, 1,1), glm::vec2(), glm::vec3(0, 1, 0), glm::vec3(1, 0, 1) });
-
-
-
-    vertices.push_back(vertex{ glm::vec3(1, -1,-1), glm::vec2(), glm::vec3(1, 0, 0), glm::vec3(0, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, 1,-1), glm::vec2(), glm::vec3(1, 0, 0), glm::vec3(0, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, -1,1), glm::vec2(), glm::vec3(1, 0, 0), glm::vec3(0, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, 1,-1), glm::vec2(), glm::vec3(1, 0, 0), glm::vec3(0, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, 1,1), glm::vec2(), glm::vec3(1, 0, 0), glm::vec3(0, 0, 1) });
-    vertices.push_back(vertex{ glm::vec3(1, -1,1), glm::vec2(), glm::vec3(1, 0, 0), glm::vec3(0, 0, 1) });
-
-    vertices.push_back(vertex{ glm::vec3(-1,-1, -1), glm::vec2(), glm::vec3(-1, 0, 0), glm::vec3(1, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, -1,1), glm::vec2(), glm::vec3(-1, 0, 0), glm::vec3(1, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, 1,-1), glm::vec2(), glm::vec3(-1, 0, 0), glm::vec3(1, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, 1,-1), glm::vec2(), glm::vec3(-1, 0, 0), glm::vec3(1, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, -1,1), glm::vec2(), glm::vec3(-1, 0, 0), glm::vec3(1, 1, 0) });
-    vertices.push_back(vertex{ glm::vec3(-1, 1,1), glm::vec2(), glm::vec3(-1, 0, 0), glm::vec3(1, 1, 0) });
-
-
-
+    vertices.push_back(vertex{ glm::vec3(0, 1, 0), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(1, 0, 0) });
+    vertices.push_back(vertex{ glm::vec3(-1,-1, 0), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(0, 1, 0) });
+    vertices.push_back(vertex{ glm::vec3(1,-1, 0), glm::vec2(), glm::vec3(0, 0, 1), glm::vec3(0, 0, 1) });
     
     return vertices;
 }
@@ -238,13 +191,7 @@ std::vector<tetrahedron> splitFractalTetrahedron(std::vector<tetrahedron> tetrah
 
         // TODO: Subdivide tetrahedron to create 4 new ones.
         // splitTetrahedra[0][0] = ;
-        // Each vertex is connected to each other vertex. The subdivision is done by computing the midpoint between all indices:
-        for (int i = 0; i < 4; ++i){
-            for (int j = 0; j < 4; ++j){
-                splitTetrahedra[i][j] = vertexLerp(th[i], th[j], 0.5f);
-            }
-        }
-
+        // ...
 
         result.insert(result.end(), splitTetrahedra.cbegin(), splitTetrahedra.cend());
     }
@@ -260,16 +207,7 @@ std::vector<vertex> createFractalTetrahedronVertices()
     tetrahedron initialTetrahedron{};
     
     // TODO: create a tetrahedron containing 4 vertices.
-    initialTetrahedron[0] = { glm::vec3(-1,-1,-1), glm::vec2(), glm::vec3(), glm::vec3(1,1,1) };
-    initialTetrahedron[1] = { glm::vec3(0,1,0), glm::vec2(), glm::vec3(), glm::vec3(0,0,1) };
-    initialTetrahedron[2] = { glm::vec3(1,-1,-1), glm::vec2(), glm::vec3(), glm::vec3(1,0,0) };
-    initialTetrahedron[3] = { glm::vec3(0,-1,1), glm::vec2(), glm::vec3(), glm::vec3(0,1,0) };
-
-    //initialTetrahedron[0] = { glm::vec3(1,1,1), glm::vec2(), glm::vec3(), glm::vec3(1,1,1) };
-    //initialTetrahedron[1] = { glm::vec3(-1,-1,1), glm::vec2(), glm::vec3(), glm::vec3(0,0,1) };
-    //initialTetrahedron[2] = { glm::vec3(1,-1,-1), glm::vec2(), glm::vec3(), glm::vec3(1,0,0) };
-    //initialTetrahedron[3] = { glm::vec3(-1,1,-1), glm::vec2(), glm::vec3(), glm::vec3(0,1,0) };
-
+    // initialTetrahedron[0] = { glm::vec3(), glm::vec2(), glm::vec3(), glm::vec3() };
     // ...
 
     std::vector<tetrahedron> FractalTetrahedra = splitFractalTetrahedron(std::vector<tetrahedron>{ initialTetrahedron });
@@ -321,7 +259,7 @@ int main()
         return 1;
 
     // load shader
-    GLuint shaderProgram = glframework::loadShaderProgram("shaders/default.vert", "shaders/light.frag");
+    GLuint shaderProgram = glframework::loadShaderProgram("shaders/default.vert", "shaders/flat.frag");
     GLint mvpLocation = glGetUniformLocation(shaderProgram, "MVP");
 
     // create the cube mesh
@@ -374,13 +312,13 @@ int main()
         {
             // draw cube
             glBindVertexArray(cubaVAO.id);
-            glDrawArrays(GL_TRIANGLES, 0, 36); // TODO: Set the correct number of vertices to be rendered
+            glDrawArrays(GL_TRIANGLES, 0, 3); // TODO: Set the correct number of vertices to be rendered
         }
         else if (drawVAO == 1)
         {
             // draw fractal tetrahedron
             glBindVertexArray(tetrahedronVAO.id);
-            glDrawArrays(GL_TRIANGLES, 0, tetrahedronVAO.vertexCount); // TODO: Set the correct number of vertices to be rendered
+            glDrawArrays(GL_TRIANGLES, 0, 0); // TODO: Set the correct number of vertices to be rendered
         }
 
         glframework::endFrame();
