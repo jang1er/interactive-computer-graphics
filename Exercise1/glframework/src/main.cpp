@@ -228,8 +228,6 @@ std::vector<tetrahedron> splitFractalTetrahedron(std::vector<tetrahedron> tetrah
     for (const auto& th : tetrahedra)
     {
         std::array<tetrahedron, 4> splitTetrahedra{};
-
-        // TODO: Subdivide tetrahedron to create 4 new ones.
         splitTetrahedra[0][0] = th[0];
         splitTetrahedra[0][1] = vertexLerp(th[0], th[1], 0.5);
         splitTetrahedra[0][2] = vertexLerp(th[0], th[2], 0.5);
@@ -263,8 +261,6 @@ std::vector<tetrahedron> splitFractalTetrahedron(std::vector<tetrahedron> tetrah
 std::vector<vertex> createFractalTetrahedronVertices()
 {
     tetrahedron initialTetrahedron{};
-    
-    // TODO: create a tetrahedron containing 4 vertices.
     // initialTetrahedron[0] = { glm::vec3(), glm::vec2(), glm::vec3(), glm::vec3() };
     initialTetrahedron[0] = {glm::vec3(-1,-1,-1), glm::vec2(), glm::vec3(), glm::vec3(1, 0, 0)};
     initialTetrahedron[1] = {glm::vec3(0, 1, 0), glm::vec2(), glm::vec3(), glm::vec3(1, 0, 1)};
@@ -321,7 +317,7 @@ int main()
         return 1;
 
     // load shader
-    GLuint shaderProgram = glframework::loadShaderProgram("shaders/default.vert", "shaders/light.frag");
+    GLuint shaderProgram = glframework::loadShaderProgram("shaders/default.vert", "shaders/flat.frag");
     GLint mvpLocation = glGetUniformLocation(shaderProgram, "MVP");
 
     // create the cube mesh

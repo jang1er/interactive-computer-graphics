@@ -1,0 +1,13 @@
+## Question 1
+a)
+
+b)
+
+c)
+
+## Question 2
+b)
+the command is glEnable(GL_CULL_FACE) and glCullFace(GL_Back)
+The immideate benefit is that triangles which do not face the "camera" / viewport
+will be discarded from further processing in the render pipeline. This can help to improve performance
+To specify the winding as counterclockwise use the following command: glFrontFace(GL_CCW)
