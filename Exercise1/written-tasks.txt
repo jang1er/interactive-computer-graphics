@@ -1,9 +1,71 @@
 ## Question 1
 a)
+Application Stage:
+- Scene modeling
+- Animation Paths
+- Collision Deetction
+- Oclusion Culling
+
+Geometry Stage:
+- Gemotric 3d transformation
+  - basic transformations
+  - Alignment of scene objects
+- Primitve Assembly
+  - composition to primitives
+  - generation of new vertices through tesselation
+- Geometric Projection
+- Clipping
+
+Rasterization Stage:
+- Conversion of primitves into fragments (pixels)
+  - Discretization in relation to target grid
+  - aptimized algorithms for certain primitives (triangle, line, ..)
+- per fragment tests after rendering
+  - depth, transparency, masking
+  - copied to framebuffer (if they pass the tests)
+  - can be blended with current pixel values
+
 
 b)
+stage: rasterization stage
+- Fixed Function Rasterization
+  - geometry is converted into raster coordinates
+  - efficent algorithms necessary
+  - specialized algorithms for all primitives
+- Programmable Fragment Processing
+  - can set color of a pixel
+    - lighting calculation
+    - fog
+    - glare
+    - Discarding Fragments
+- Fragment Tests and Operations
+  - per-fragment tests and operations
+  - fragment needs to pass all tests to become a pixel
+  - Alpha, Stencil, Depth Tests
+  - Color Blending
 
 c)
+Application Stage:
+- glUseProgram(programID)
+  - changes the current (shader) program OpenGL is using for rendering
+- glBindBuffer(GL_ARRAY_BUFFER, bufferID)
+  - changes the current bound buffer, so new operations can be executed on it
+
+Geometry Stage:
+- glFrontFace(GL_CCW)
+  - sets the winding order that is considerd to be front facing
+- glEnable(GL_CULL_FACE)
+  - enables Culling of away facing Vertices, with glCullFace(GL_BACK) the face to be culled can be selected
+
+Rasterization Stage:
+- glEnable(GL_DEPTH_TEST)
+  - enables the Depth test for each fragment, with glDepthFunc(func) the comparison function can be set
+- glEnable(GL_BLEND)
+  - enables fragment blending, with glBlendFunc(srcFac, destFac) the blending factors can be assignend
+- glDisable(func)
+  - disables the specified function from further use
+
+
 
 ## Question 2
 b)
