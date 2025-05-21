@@ -317,7 +317,7 @@ int main()
         return 1;
 
     // load shader
-    GLuint shaderProgram = glframework::loadShaderProgram("shaders/default.vert", "shaders/flat.frag");
+    GLuint shaderProgram = glframework::loadShaderProgram("shaders/default.vert", "shaders/light.frag");
     GLint mvpLocation = glGetUniformLocation(shaderProgram, "MVP");
 
     // create the cube mesh
