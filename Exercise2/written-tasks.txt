@@ -1,0 +1,61 @@
+## a)
+- GL_TRIANGLES
+  - each 3 vertices describe a triangle
+- GL_TRIANGLES_STRIP
+  - first 3 vertices describe the first triangle
+  - every following verticy build a triangle with the previous 2 vertices
+- GL_TRIANGLES_FAN
+  - first 3 vertices define first triangle
+  - every following verticy constructs a triangle with the first point (p0) and the last point (fan around p0)
+
+
+
+
+## b)
+### Figure 1
+**GL_TRIANGLES**
+VBO: [p0,p4,p1,p1,p4,p2,p2,p4,p3,p3,p4,p6,p6,p4,p5,p5,p4,p0]
+drawcalls: 1
+Call: glDrawArrays(GL_TRIANGLES, 0, 18)
+
+**GL_TRIANGLES_STRIP**
+VBO: [p0,p4,p1,p2,p4,p3,p6,p4,p5,p0]
+drawCalls: 1
+Call: glDrawArrays(GL_TRIANGLES_STRIP, 0, 10)
+
+**GL_TRIANGLES_FAN**
+VBO: [p4,p1,p0,p5,p6,p3,p2,p1]
+drawCalls: 1
+Call: glDrawArrays(GL_TRIANGLES_FAN, 0, 8)
+
+### Figure 2
+**GL_TRIANGLES**
+VBO: [p0,p1,p3,p1,p4,p3,p2,p4,p1,p2,p5,p4,p3,p4,p6,p4,p7,p6,p5,p7,p4,p5,p8,p7]
+drawcalls: 1
+Call: glDrawArrays(GL_TRIANGLES, 0, 24)
+
+**GL_TRIANGLES_STRIP**
+VBO: [p0,p1,p3,p4,p6,p7, p1,p2,p4,p5,p7,p8]
+drawCalls: 2
+Call: glDrawArrays(GL_TRIANGLES_STRIP, 0, 6); glDrawArrays(GL_TRIANGLES_STRIP, 6, 6)
+
+**GL_TRIANGLES_FAN**
+VBO: [p3,p0,p1,p4, p4,p1,p2,p5, p6,p3,p4,p7, p7,p4,p5,p6]
+drawCalls: 4
+Call: glDrawArrays(GL_TRIANGLES_FAN, 0, 4); glDrawArrays(GL_TRIANGLES_FAN, 4, 4); glDrawArrays(GL_TRIANGLES_FAN, 8, 4); glDrawArrays(GL_TRIANGLES_FAN, 12, 4)
+
+### Figure 3
+**GL_TRIANGLES**
+VBO: [p0,p5,p4,p0,p1,p5,p1,p7,p5,p1,p3,p7,p3,p6,p7,p3,p2,p6,p2,p4,p6,p2,p0,p4]
+drawcalls: 1
+Call: glDrawArrays(GL_TRIANGLES, 0, 24)
+
+**GL_TRIANGLES_STRIP**
+VBO: [p0,p1,p5,p7, p1,p3,p7,p6, p3,p2,p6,p4, p3,p0,p4,p5]
+drawCalls: 4
+Call: glDrawArrays(GL_TRIANGLES_STRIP, 0, 4); glDrawArrays(GL_TRIANGLES_STRIP, 4, 4); glDrawArrays(GL_TRIANGLES_STRIP, 8, 4); glDrawArrays(GL_TRIANGLES_STRIP, 12, 4);
+
+**GL_TRIANGLES_FAN**
+VBO: [p0,p1,p5,p4, p1,p3,p7,p6, p3,p2,p6,p7, p2,p0,p4,p6]
+drawCalls: 1
+Call: glDrawArrays(GL_TRIANGLES_FAN, 0, 4); glDrawArrays(GL_TRIANGLES_FAN, 4, 4); glDrawArrays(GL_TRIANGLES_FAN, 8, 4); glDrawArrays(GL_TRIANGLES_FAN, 12, 4);
