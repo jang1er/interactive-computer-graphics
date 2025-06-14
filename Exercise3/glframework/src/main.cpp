@@ -217,7 +217,11 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // TODO (c): Modify for time adjustments.
+<<<<<<< HEAD
         float rotTime = (glframework::getTime() - start) / 5.0f;
+=======
+        float rotTime = (glframework::getTime() - start) / 5.0f * 1000;
+>>>>>>> refs/remotes/origin/dev
 
         // TODO (a): Create matrices for sun and other objects (worldMatrices[0] ... worldMatrices[4]).
         glm::mat4 identity = glm::mat4(1.0);
